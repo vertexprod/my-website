@@ -138,6 +138,74 @@ header {
     gap: 20px;
 }
 
+/* Style commun pour les titres de section */
+.portfolio-section h2,
+.video-section h2 {
+    font-size: 36px; /* Taille de police identique */
+    font-weight: 700; /* Épaisseur de la police */
+    color: white; /* Couleur de texte blanche */
+    margin-bottom: 20px; /* Espace inférieur similaire */
+    text-align: center; /* Aligner le titre au centre */
+}
+
+
+.video-section {
+    padding: 40px 0;
+    background-color: #222; /* Couleur de fond correspondant au thème de ton site */
+    text-align: center;
+    color: white;
+}
+
+.video-section {
+    padding: 40px 0;
+    background-color: #222; /* Couleur de fond correspondant au thème de ton site */
+    text-align: center;
+    color: white;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;  /* Affiche la vidéo et la description en colonne */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;          /* Centre le conteneur au milieu de la page */
+    max-width: 1280px;       /* Largeur maximale pour la vidéo */
+    padding: 20px;           /* Espacement autour du conteneur */
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1280px; /* Largeur maximale pour la vidéo */
+    padding-bottom: 56.25%;  /* Ratio 16:9 (9/16 = 0.5625) */
+    height: 0;               /* Hauteur de 0 pour utiliser le padding */
+    margin-bottom: 20px;     /* Espace entre la vidéo et la description */
+    overflow: hidden;        /* Cache tout débordement */
+    border-radius: 8px;      /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1; /* Pas de bordure */
+}
+
+.video-description {
+    max-width: 800px;         /* Largeur maximale pour le texte de description */
+    font-size: 18px;          /* Taille de police confortable */
+    line-height: 1.6;         /* Hauteur de ligne pour la lisibilité */
+    color: #ccc;              /* Couleur de texte légèrement grise */
+    text-align: center;       /* Centre la description sous la vidéo */
+}
+
+
+
+
+
 .portfolio-item img {
     width: 100%;
     border-radius: 10px;
