@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D - VERTEX PRODUCTION</title>
+    <link rel="icon" href="https://github.com/vertexprod/my-website/blob/main/ME/logo_vertex.png?raw=true" type="image/x-icon"> <!-- Lien vers la favicon -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico"> <!-- Favicon -->
+
+    <!-- Styles pour le lightbox -->
+    <style>
+        /* Lightbox overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .lightbox-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <img src="F:\SITE WEB\IMAGES\ME\Sans-titre-petit-petit.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="portfolio-3d.html">3D</a></li>
+                <li><a href="portfolio-miniamaker.html">GRAPHISME</a></li>
+                <li><a href="video.html">VIDÉO</a></li>
+                <li><a href="contact.html">CONTACTEZ-NOUS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Titre de la Page 1 -->
+        <section class="hero">
+            <h1>Kuch CBD</h1>
+        </section>
+
+        <!-- Cartes de Portfolio 3D -->
+        <section class="portfolio-details">
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>GELATO</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/Gelato.jpg?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>GORILLA BREATH</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/Gorilla.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>GRINDER</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/GRINDER.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>	
+                <div class="service-item">
+                    <h3>STRAWBERRY KUCH</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/StrawBerryF.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>TANGERINE DREAM</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/Tange.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>RUNTZ</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/Runtz.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>DOS SI DOS</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/DoSSiDos.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>BLUEBERRY MUFFIN</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/BlueberryMuffin.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>MAGO HAZE</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/mango_Haze.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>PINK LADIE</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/pink_ladie_v2.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>ZKITTLEZ</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/zkittlez.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>ZINZIN KCUH</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/Zinzin.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <div class="service-item">
+                    <h3>SIMPKUCH</h3>
+			<img src="https://github.com/vertexprod/my-website/blob/main/KUCH/SimpKuch.png?raw=true" alt="Portfolio 3D" class="portfolio-image" class="portfolio-image">
+                </div>
+                <!-- Ajouter d'autres cartes de projet si nécessaire -->
+            </div>
+        </section>
+    </main>
+    <main>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Aperçu agrandi">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VERTEX PRODUCTION. Tous droits réservés.</p>
+    </footer>
+
+    <!-- JavaScript pour le Lightbox -->
+    <script>
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-image').src = imageSrc;
+            document.getElementById('lightbox').style.display = 'block';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionne toutes les images cliquables
+    const images = document.querySelectorAll('.portfolio-image');
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxContent = document.querySelector('.lightbox-content img');
+    const closeButton = document.querySelector('.close-lightbox');
+
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            lightboxContent.src = image.src;
+            lightbox.style.display = 'block';
+        });
+    });
+
+    closeButton.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Fermer la lightbox lorsqu'on clique en dehors de l'image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+});
+</script>
+</body>
+</html>
