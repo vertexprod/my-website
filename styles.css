@@ -1,4 +1,3 @@
-/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
     background-color: #1e1e1e;
@@ -111,7 +110,6 @@ nav a {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Ajout du curseur pointer pour indiquer que l'image est cliquable */
 }
 
 .video-section {
@@ -131,25 +129,51 @@ nav a {
     padding: 20px;           /* Espacement autour du conteneur */
 }
 
-.video-wrapper {
+.video-wrapper-responsive {
     position: relative;
     width: 100%;
-    max-width: 1920px; /* Largeur maximale pour la vidéo */
-    padding-bottom: 56.25%;  /* Ratio 16:9 (9/16 = 0.5625) */
-    height: 0;               /* Hauteur de 0 pour utiliser le padding */
-    margin-bottom: 20px;     /* Espace entre la vidéo et la description */
-    overflow: hidden;        /* Cache tout débordement */
-    border-radius: 8px;      /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    overflow: hidden;
+    background-color: #000; /* Arrière-plan noir pour les vidéos non full-screen */
 }
 
-.video-wrapper iframe {
+/* Ratio 9:16 pour les vidéos verticales */
+.video-wrapper-responsive.vertical {
+    padding-top: 9%; /* Ratio inversé pour 9:16 */
+}
+
+/* Ratio 16:9 pour les vidéos horizontales */
+.video-wrapper-responsive.horizontal {
+    padding-top: 56.25%; /* Ratio standard pour 16:9 */
+}
+
+.video-wrapper-responsive iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Pas de bordure */
+    border: none; /* Enlever la bordure de l'iframe */
+}
+
+/* Iframe de la vidéo */
+.portfolio-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    aspect-ratio: attr(data-aspect-ratio, auto); /* Utilisation de l'aspect-ratio détecté */
+}
+
+/* Style par défaut pour la vidéo verticale */
+.video-wrapper-responsive::before {
+    content: "";
+    display: block;
+    padding-top: 177.78%; /* Ratio 9:16 par défaut pour les vidéos verticales */
+}
+
+/* Style spécifique pour les vidéos horizontales */
+.portfolio-video[data-aspect-ratio="16/9"] ~ .video-wrapper-responsive::before {
+    padding-top: 56.25%; /* Ratio 16:9 pour les vidéos horizontales */
 }
 
 .video-description {
@@ -160,73 +184,9 @@ nav a {
     text-align: center;       /* Centre la description sous la vidéo */
 }
 
-/* Lightbox overlay */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Arrière-plan semi-transparent */
-}
-
-.lightbox-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 80%;
-    max-height: 80%;
-    text-align: center; /* Centre l'image dans le conteneur */
-    overflow: hidden; /* S'assure que l'image ne dépasse pas */
-}
-
-.lightbox-content img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre pour l'image agrandie */
-}
-
-.close-lightbox {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Section Contact */
-.contact-section {
-    padding: 100px 20px;
-    background: #1a1a1a; /* Fond noir */
+footer {
     text-align: center;
-}
-
-.contact-section h2 {
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    color: #fff; /* Texte blanc */
-}
-
-.contact-info {
-    color: #ccc; /* Texte gris clair */
-    font-size: 1.2em;
-}
-
-.contact-info p {
-    margin: 10px 0;
-}
-
-.contact-info a {
-    color: #fff; /* Liens en blanc */
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    color: #aaa; /* Liens en gris clair au survol */
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #fff;
 }
