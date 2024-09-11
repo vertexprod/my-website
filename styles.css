@@ -190,3 +190,34 @@ footer {
     background-color: #1e1e1e;
     color: #fff;
 }
+
+.contact-section {
+    display: flex;
+    justify-content: center; /* Centre la carte de contact horizontalement */
+    margin: 40px 0; /* Espacement autour de la section */
+}
+
+.product-card {
+    background-color: #1a1a1a; /* Même couleur de fond que les autres cartes */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff; /* Couleur du texte en blanc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre pour la carte */
+    width: 300px; /* Largeur de la carte */
+    flex: 1 1 250px; /* Pour un design responsive */
+}
+
+.contact-info p {
+    margin: 10px 0; /* Espacement entre les lignes */
+}
+
+.contact-info a {
+    color: #0a84ff; /* Couleur des liens */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Soulignement des liens au survol */
+}
